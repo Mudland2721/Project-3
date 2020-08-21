@@ -1,0 +1,208 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Developers R Us</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
+    <!-- CSS only -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <!-- JS, Popper.js, and jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/api-events.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/login.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--Nav Bar---------------------------------------------------------------------->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a
+          role="button"
+          class="navbar-burger burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">
+            Home
+          </a>
+          <a
+            class="navbar-item"
+            href="https://github.com/Mudland2721/Project-3"
+          >
+            Repository
+          </a>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-info" id="blue">
+                <strong>Sign Out</strong>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--Nav Bar End------------------------------------------------------------->
+    <!--hero------------------------------------------------------------------------>
+    <section class="hero center" src="">
+      <div class="hero-body">
+        <div class="container">
+          <!-- <h1 class="title is-1">Welcome</h1>
+          <h2 class="subtitle-1">Its time to begin</h2> -->
+        </div>
+      </div>
+    </section>
+    <!--colum---------------------------------------------------------------------->
+    <div class="columns">
+      <div class="column">
+        <div class="card">
+          <div class="card-content">
+            <h2 class="title">What language do you want to learn?</h2>
+            <h3 class="subtitle">
+              <div class="form-group">
+                <label for="exampleInputEmail1"></label>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="CSS, HTML, JavaScript"
+                />
+              </div>
+            </h3>
+          </div>
+          <footer class="card-footer">
+            <div class="card-footer-item">
+              <a href="#" class="button is-info" id="button ">
+                <i class="fa fa-thumbs-o-up">Set Goals</i>
+              </a>
+            </div>
+          </footer>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="card-content">
+            <h2 class="title">Bookstore Recommendation :</h2>
+            <h3 class="subtitle">
+              <div class="form-group">
+                <label for="exampleInputEmail1"></label>
+                <input
+                  id="city-input"
+                  type="email"
+                  class="form-control"
+                  placeholder="Enter City"
+                />
+              </div>
+            </h3>
+            <ul class="bookstore-information">
+              <li>
+                <p id="location-name">Name of Bookstore:</p>
+              </li>
+              <li>
+                <p id="location-address">Address:</p>
+              </li>
+              <li>
+                <p id="location-rating">Rating:</p>
+              </li>
+            </ul>
+          </div>
+          <footer class="card-footer">
+            <div class="card-footer-item">
+              <a class="button is-info" id="button prevent-default">
+                <i class="fa fa-thumbs-o-up" id="user-city">Select City</i>
+              </a>
+            </div>
+          </footer>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card" id="books-card">
+          <div class="card-content">
+            <h2 class="title">View Related Books</h2>
+            <h3 class="subtitle">
+              <div class="form-group">
+                <label for="exampleInputEmail1"></label>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="CSS, HTML, JavaScript"
+                  id="language-input"
+                />
+              </div>
+            </h3>
+            <ul id="book-response">
+              <li>
+                <p id="book-title">Book Title:</p>
+              </li>
+              <li>
+                <p id="book-description">Book Description:</p>
+              </li>
+              <li>
+                <p id="book-authors">Book Author:</p>
+              </li>
+            </ul>
+          </div>
+          <footer class="card-footer">
+            <div class="card-footer-item">
+              <a class="button is-info" id="button prevent-default">
+                <i class="fa fa-thumbs-o-up" id="buy-now">Buy Now</i>
+              </a>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <!--Footer Start---------------------------------------------------------------------------------->
+    <footer class="footer">
+      <div class="content has-text-centered" id="github">
+        <strong>Created by:</strong>
+        <p>
+          <a href="https://github.com/Errn17">Aaron Howard</a>,
+          <a href="https://github.com/Mudland2721">Mason Morey</a>, and
+          <a href="https://github.com/BFormbs">Brandon Formby</a>.
+        </p>
+        <a href="https://github.com/Mudland2721/Project-3">
+          <input
+            type="image"
+            src="https://www.analyticsvidhya.com/wp-content/uploads/2015/07/github_logo.png"
+            width="8%"
+            height="2%"
+        /></a>
+      </div>
+    </footer>
+    <!--Footer End---------------------------------------------------------------------------------->
+  </body>
+</html>

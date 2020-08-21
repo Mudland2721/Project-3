@@ -1,0 +1,81 @@
+body {
+    background-color: ;
+}
+
+.navbar {
+    padding-bottom: 25px;
+}
+
+#languageGoals {
+    width: 100%;
+}
+
+.hero {
+    background-image: url(https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+    background-image: image();
+    padding-top: 300px;
+    /* padding-bottom: 75px; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+
+    background-size: 100%;
+}
+
+#blue {
+    background-color: #3A66A7;
+}
+
+.is-1 {
+    color: white;
+}
+
+.subtitle-1 {
+    color: white;
+}
+
+.hero-body {
+    text-align: center;
+}
+
+.column {
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+}
+
+.card-content {
+    border-style: groove;
+    border-color: #3A66A7;
+}
+
+#button {
+    display: block;
+    width: 50%;
+    border: none;
+    background-color: #3A66A7;
+    padding: 14px 28px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+}
+
+.footer {
+    font-size: 18px;
+}
+
+/* login */
+#login-header {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#form {
+    padding-top: 20px;
+}

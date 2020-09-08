@@ -1,76 +1,45 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React, { Component } from "react";
 import "./App.css";
+import { Layout, Header, Navigation, Drawer, Content } from "react-mdl";
+import Main from "./components/main";
+import { Link } from "react-router-dom";
 
-function App() {
-  const [registerUsername, setRegisterUsername] = useState("");
-  const [registerPassword, setRegisterPassword] = useState("");
-  const [loginUsername, setLoginUsername] = useState("");
-  const [loginPassword, setLoginPassword] = useState("");
-  const register = () => {
-    axios({
-      method: "POST",
-      data: {
-        username: registerUsername,
-        password: registerPassword,
-      },
-      withCredentials: true,
-      url: "http://localhost:3000/register",
-    }).then((res) => console.log(res));
-  };
-  const login = () => {
-    axios({
-      method: "POST",
-      data: {
-        username: loginUsername,
-        password: loginPassword,
-      },
-      withCredentials: true,
-      url: "http://localhost:3000/login",
-    }).then((res) => console.log(res));
-  };
-  const getUser = () => {
-    axios({
-      method: "GET",
-      withCredentials: true,
-      url: "http://localhost:3000/getUser",
-    }).then((res) => console.log(res));
-  };
-
-  return (
-    <div className='App'>
-      <div>
-        <h1>Register</h1>
-        <input
-          placeholder='username'
-          onChange={(e) => setRegisterUsername(e.target.value)}
-        />
-        <input
-          placeholder='password'
-          onChange={(e) => setRegisterPassword(e.target.value)}
-        />
-        <button onClick={register}>Submit</button>
+class App extends Component {
+  render() {
+    return (
+      <div className='demo-big-content'>
+        <Layout>
+          <Header
+            className='header-color'
+            title={
+              <Link style={{ textDecoration: "none", color: "white" }} to='/'>
+                Song App
+              </Link>
+            }
+            scroll>
+            <Navigation>
+              <Link to='/login'>Login</Link>
+              <Link to='/register'>Register</Link>
+            </Navigation>
+          </Header>
+          <Drawer
+            title={
+              <Link style={{ textDecoration: "none", color: "black" }} to='/'>
+                SongApp
+              </Link>
+            }>
+            <Navigation>
+              <Link to='/favorites'>Favorites</Link>
+            </Navigation>
+          </Drawer>
+          <Content>
+            <div className='page-content' />
+            <Main />
+          </Content>
+        </Layout>
       </div>
-
-      <div>
-        <h1>Login</h1>
-        <input
-          placeholder='username'
-          onChange={(e) => setLoginUsername(e.target.value)}
-        />
-        <input
-          placeholder='password'
-          onChange={(e) => setLoginPassword(e.target.value)}
-        />
-        <button onClick={login}>Submit</button>
-      </div>
-
-      <div>
-        <h1>Get User</h1>
-        <button onClick={getUser}>Submit</button>
-      </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;

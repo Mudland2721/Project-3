@@ -1,10 +1,41 @@
 import React, { Component } from "react";
 import "./App.css";
+import axios from "axios";
 import { Layout, Header, Navigation, Drawer, Content } from "react-mdl";
 import Main from "./components/main";
 import { Link } from "react-router-dom";
 
 class App extends Component {
+  state = {
+    artist: "",
+  };
+
+  componentDidMount() {
+    this.fetchArtist();
+  }
+
+  fetchArtist = () => {
+    axios({
+      method: "GET",
+      url: "https://deezerdevs-deezer.p.rapidapi.com/search",
+      headers: {
+        "content-type": "application/octet-stream",
+        "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+        "x-rapidapi-key": "d0b39321a7msha49b7aec705a8c7p18e760jsnf7d5b65d6c7c",
+        useQueryString: true,
+      },
+      params: {
+        q: "eminem",
+      },
+    })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   render() {
     return (
       <div className='demo-big-content'>

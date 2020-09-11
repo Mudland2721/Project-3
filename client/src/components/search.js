@@ -13,7 +13,16 @@ class Search extends Component {
     this.setState({
       [e.target.value]: e.target.value,
     });
+    this.setState({
+      [e.target.value]: "",
+    });
   };
+
+  keyPressed(event) {
+    if (event.key === "Enter") {
+      console.log(`ENTER CLICKEDDDDDDDDDD`);
+    }
+  }
 
   handleFormSubmit(event) {
     event.preventDefault();
@@ -47,7 +56,8 @@ class Search extends Component {
     return (
       <Textfield
         onChange={(e) => this.change(e)}
-        placeholder='search'
+        onKeyPress={this.keyPressed}
+        placeholder='Search'
         label='Expandable Input'
         expandable
         expandableIcon='search'

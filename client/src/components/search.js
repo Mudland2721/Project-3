@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import { Textfield } from "react-mdl";
 import axios from "axios";
 
+//add bootstrap html head tag that ben talked about into new component.
+
+//The data returned from here will be handed to that component to fill cards with data
+
 class Search extends Component {
   constructor(props) {
     super(props);
@@ -20,7 +24,7 @@ class Search extends Component {
 
   keyPressed(event) {
     if (event.key === "Enter") {
-      console.log(`ENTER CLICKEDDDDDDDDDD`);
+      this.handleFormSubmit();
     }
   }
 

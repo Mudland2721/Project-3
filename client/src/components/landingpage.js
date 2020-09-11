@@ -13,7 +13,7 @@ class Landing extends Component {
             className='header-color'
             title={
               <Link style={{ textDecoration: "none", color: "white" }} to='/'>
-                WalkMan
+                WalkMan   
               </Link>
             }
             scroll>

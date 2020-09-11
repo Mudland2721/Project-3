@@ -3,30 +3,13 @@ import { Textfield } from "react-mdl";
 import axios from "axios";
 
 class Search extends Component {
-  state = {
-    artist: "",
-  };
-
-  // componentDidMount() {
-  //   document.addEventListener("keydown");
-  // }
-
-  // handleInputChange = event => {
-  //   set state
-  //   if user typed in more than 3 characters
-  //     wait a second
-  //     call the API
-  // };
-
-  // onKeyDown(e) {
-  //   // make api call here
-
-  //   if (e.key === `Enter`) {
-  //     console.log(`ENTER CLICKED!!!!!!!!!!!!!!!!!!!!!!!!!!!`);
-  //   }
-  // }
+  constructor(props) {
+    super(props);
+    this.state = { artist: "" };
+  }
 
   change = (e) => {
+    console.log("e.target.value:", e.target.value);
     this.setState({
       [e.target.value]: e.target.value,
     });

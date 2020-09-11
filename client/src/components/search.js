@@ -10,6 +10,9 @@ class Search extends Component {
   constructor(props) {
     super(props);
     this.state = { artist: "" };
+    //handle change
+    this.keyPressed = this.keyPressed.bind(this);
+    this.handleFormSubmit = this.handleFormSubmit.bind(this);
   }
 
   change = (e) => {

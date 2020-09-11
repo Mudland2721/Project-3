@@ -22,7 +22,7 @@ class Search extends Component {
         useQueryString: true,
       },
       params: {
-        q: "eminem",
+        q: this.state.artist,
       },
     })
       .then((data) => {
@@ -36,8 +36,9 @@ class Search extends Component {
   render() {
     return (
       <Textfield
-        onChange={() => {}}
+        onChange={(e) => this.setState({ artist: e.target.value })}
         label='Expandable Input'
+        value={this.state.artist}
         expandable
         expandableIcon='search'
       />

@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
+
 import UserContext from "../../context/userContext";
 
 export default function AuthOptions() {
@@ -9,6 +10,11 @@ export default function AuthOptions() {
 
   const SignUp = () => history.push("/register");
   const SignIn = () => history.push("/login");
+
+
+
+
+
   const logout = () => {
     setUserData({
       token: undefined,

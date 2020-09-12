@@ -2,16 +2,39 @@ import React, { Component } from "react";
 import { Textfield } from "react-mdl";
 import axios from "axios";
 
-class Search extends Component {
-  state = {
-    artist: "",
-  };
+//add bootstrap html head tag that ben talked about into new component.
 
-  componentDidMount() {
-    this.fetchArtist();
+//The data returned from here will be handed to that component to fill cards with data
+
+class Search extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { artist: "" };
+    //handle change
+    this.keyPressed = this.keyPressed.bind(this);
+    this.handleFormSubmit = this.handleFormSubmit.bind(this);
+    // this.fetchArtist = this.fetchArtist.bind(this);
   }
 
-  fetchArtist = () => {
+  change = (e) => {
+    // console.log("e.target.value:", e.target.value);
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  keyPressed(event) {
+    if (event.key === "Enter") {
+      this.handleFormSubmit(event);
+    }
+  }
+
+  handleFormSubmit(event) {
+    event.preventDefault();
+    console.log(
+      `HERE WE GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO`
+    );
+    // console.log(this.state.name);
     axios({
       method: "GET",
       url: "https://deezerdevs-deezer.p.rapidapi.com/search",
@@ -22,7 +45,7 @@ class Search extends Component {
         useQueryString: true,
       },
       params: {
-        q: "eminem",
+        q: this.state.artist,
       },
     })
       .then((data) => {
@@ -31,13 +54,16 @@ class Search extends Component {
       .catch((error) => {
         console.log(error);
       });
-  };
+  }
 
   render() {
     return (
       <Textfield
-        onChange={() => {}}
+        onChange={(e) => this.change(e)}
+        onKeyPress={this.keyPressed}
+        placeholder='Search'
         label='Expandable Input'
+        name='artist'
         expandable
         expandableIcon='search'
       />

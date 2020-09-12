@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import AuthOptions from "../components/auth/AuthOptions";
 import { Layout, Header, Navigation, Drawer, Content } from "react-mdl";
 import { Link } from "react-router-dom";
 import Search from "./search";
@@ -18,9 +18,9 @@ class Landing extends Component {
             }
             scroll>
             <Search />
+
             <Navigation>
-              <Link to='/login'>Login</Link>
-              <Link to='/register'>Register</Link>
+              <AuthOptions />
             </Navigation>
           </Header>
           <Drawer

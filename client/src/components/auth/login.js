@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -13,7 +13,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import { useHistory } from "react-router-dom";
-import createContext from "../../context/userContext";
+import UserContext from "../../context/userContext";
 import Axios from "axios";
 import ErrorNotice from "../misc/ErrorNotice";
 
@@ -56,7 +56,7 @@ export default function SignIn() {
   const [password, setPassword] = useState();
   const [error, setError] = useState();
 
-  const { setUserData } = useContext(createContext);
+  const { setUserData } = useContext(UserContext);
   const history = useHistory();
 
   const submit = async (e) => {
@@ -115,7 +115,6 @@ export default function SignIn() {
             type='password'
             id='password'
             autoComplete='current-password'
-            type='password'
             onChange={(e) => setPassword(e.target.value)}
           />
           <FormControlLabel

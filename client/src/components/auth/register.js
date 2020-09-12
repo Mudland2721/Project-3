@@ -10,7 +10,7 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import createContext from "../../context/userContext";
+import UserContext from "../../context/userContext";
 import { useHistory } from "react-router-dom";
 import ErrorNotice from "../misc/ErrorNotice";
 import Axios from "axios";
@@ -55,7 +55,7 @@ export default function SignUp() {
   const [firstName, setFirstName] = useState();
   const [lastName, setLastName] = useState();
   const [error, setError] = useState();
-  const { setUserData } = useContext(createContext);
+  const { setUserData } = useContext(UserContext);
   const history = useHistory();
 
   const submit = async (e) => {

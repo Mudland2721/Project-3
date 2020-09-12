@@ -2,22 +2,15 @@ import React, { Component } from "react";
 import { Textfield } from "react-mdl";
 import axios from "axios";
 
-//add bootstrap html head tag that ben talked about into new component.
-
-//The data returned from here will be handed to that component to fill cards with data
-
 class Search extends Component {
   constructor(props) {
     super(props);
     this.state = { artist: "" };
-    //handle change
     this.keyPressed = this.keyPressed.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
-    // this.fetchArtist = this.fetchArtist.bind(this);
   }
 
   change = (e) => {
-    // console.log("e.target.value:", e.target.value);
     this.setState({
       [e.target.name]: e.target.value,
     });

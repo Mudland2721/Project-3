@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { Layout, Header, Navigation, Drawer, Content } from "react-mdl";
 import { Link } from "react-router-dom";
 import Search from "./search";
+import Songs from "./songs";
 
 class Landing extends Component {
   render() {
@@ -23,6 +24,7 @@ class Landing extends Component {
               <Link to='/register'>Register</Link>
             </Navigation>
           </Header>
+          <Songs />
           <Drawer
             title={
               <Link style={{ textDecoration: "none", color: "black" }} to='/'>

@@ -7,8 +7,10 @@ import {
   CardMenu,
   Button,
   IconButton,
+  Cell,
+  Grid,
 } from "react-mdl";
-import Search from "./search";
+// import Search from "./search";
 //add bootstrap html head tag that ben talked about into new component.
 //The data returned from here will be handed to that component to fill cards with data
 
@@ -23,7 +25,9 @@ class Songs extends Component {
     return (
       <Grid className='demo-grid-1'>
         <Cell col={4}>
-          <Card shadow={0} style={{ width: "512px", margin: "auto" }}>
+          <Card
+            shadow={0}
+            style={{ width: "250px", height: "100px", margin: "auto" }}>
             <CardTitle
               style={{
                 color: "#fff",
@@ -33,12 +37,16 @@ class Songs extends Component {
               }}>
               Welcome
             </CardTitle>
-            <CardText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              sagittis pellentesque lacus eleifend lacinia...
+            <CardText style={{ fontSize: "9px" }}>
+              <strong>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                sagittis pellentesque lacus eleifend lacinia...
+              </strong>
             </CardText>
             <CardActions border>
-              <Button colored>Get Started</Button>
+              <Button style={{ fontSize: "10px" }} colored>
+                Get Started
+              </Button>{" "}
             </CardActions>
             <CardMenu style={{ color: "#fff" }}>
               <IconButton name='share' />
@@ -47,7 +55,9 @@ class Songs extends Component {
         </Cell>
 
         <Cell col={4}>
-          <Card shadow={0} style={{ width: "512px", margin: "auto" }}>
+          <Card
+            shadow={0}
+            style={{ width: "250px", height: "100px", margin: "auto" }}>
             <CardTitle
               style={{
                 color: "#fff",
@@ -57,12 +67,16 @@ class Songs extends Component {
               }}>
               Welcome
             </CardTitle>
-            <CardText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              sagittis pellentesque lacus eleifend lacinia...
+            <CardText style={{ fontSize: "9px" }}>
+              <strong>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                sagittis pellentesque lacus eleifend lacinia...
+              </strong>
             </CardText>
             <CardActions border>
-              <Button colored>Get Started</Button>
+              <Button style={{ fontSize: "10px" }} colored>
+                Get Started
+              </Button>{" "}
             </CardActions>
             <CardMenu style={{ color: "#fff" }}>
               <IconButton name='share' />
@@ -71,7 +85,9 @@ class Songs extends Component {
         </Cell>
 
         <Cell col={4}>
-          <Card shadow={0} style={{ width: "512px", margin: "auto" }}>
+          <Card
+            shadow={0}
+            style={{ width: "250px", height: "100px", margin: "auto" }}>
             <CardTitle
               style={{
                 color: "#fff",
@@ -81,12 +97,16 @@ class Songs extends Component {
               }}>
               Welcome
             </CardTitle>
-            <CardText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              sagittis pellentesque lacus eleifend lacinia...
+            <CardText style={{ fontSize: "9px" }}>
+              <strong>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                sagittis pellentesque lacus eleifend lacinia...
+              </strong>
             </CardText>
             <CardActions border>
-              <Button colored>Get Started</Button>
+              <Button style={{ fontSize: "10px" }} colored>
+                Get Started
+              </Button>
             </CardActions>
             <CardMenu style={{ color: "#fff" }}>
               <IconButton name='share' />

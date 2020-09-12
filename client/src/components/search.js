@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Textfield } from "react-mdl";
 import axios from "axios";
+import Songs from "./songs";
 
 class Search extends Component {
   constructor(props) {
@@ -51,15 +52,17 @@ class Search extends Component {
 
   render() {
     return (
-      <Textfield
-        onChange={(e) => this.change(e)}
-        onKeyPress={this.keyPressed}
-        placeholder='Search'
-        label='Expandable Input'
-        name='artist'
-        expandable
-        expandableIcon='search'
-      />
+      <div>
+        <Textfield
+          onChange={(e) => this.change(e)}
+          onKeyPress={this.keyPressed}
+          placeholder='Search'
+          label='Expandable Input'
+          name='artist'
+          expandable
+          expandableIcon='search'
+        />
+      </div>
     );
   }
 }
